@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { PhoneCall } from "lucide-react";
 import { getUser } from "@/lib/auth/user";
 import { createSupabaseServer } from "@/lib/supabase/server";
 import { tools } from "@/lib/tools";
@@ -54,6 +55,17 @@ export default async function Dashboard() {
             <p className="muted mt-1 text-sm">{description}</p>
           </Link>
         ))}
+        <Link
+          className="card p-5 transition hover:-translate-y-1"
+          href="/dashboard/receptionists"
+        >
+          <PhoneCall className="text-amber-400" />
+          <h3 className="mt-4 font-bold">AI Receptionist</h3>
+          <p className="muted mt-1 text-sm">
+            A phone number that answers calls, books requests and captures leads
+            24/7.
+          </p>
+        </Link>
       </div>
       <h2 className="mt-10 text-xl font-bold">Recent activity</h2>
       <div className="card mt-4 divide-y">

@@ -6,6 +6,7 @@ import {
   User,
   LogOut,
   Menu,
+  PhoneCall,
 } from "lucide-react";
 import { Logo } from "./layout";
 import { tools } from "@/lib/tools";
@@ -16,6 +17,11 @@ const links = [
     label: t.name,
     icon: t.icon,
   })),
+  {
+    href: "/dashboard/receptionists",
+    label: "AI Receptionists",
+    icon: PhoneCall,
+  },
   { href: "/dashboard/history", label: "History", icon: History },
   { href: "/dashboard/documents", label: "Documents", icon: Files },
   { href: "/dashboard/account", label: "Account", icon: User },
